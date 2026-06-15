@@ -13,7 +13,7 @@ import { logoutAction } from "../auth/action/action-auth";
 
 const NAV_ITEMS = [
   { k: "dashboard", label: "Home", icon: HomeIcon, href: "/dashboard" },
-  { k: "apps", label: "Minhas aplicações", icon: GridIcon, href: "/dashboard/apps" },
+  { k: "apps", label: "Minhas aplicações", icon: GridIcon, href: "/my-api" },
   { k: "monitoring", label: "Monitoramento", icon: PulseIcon, href: "/dashboard/monitoring" },
   { k: "docs", label: "Documentação", icon: BookIcon, href: "/dashboard/docs", ext: true },
   { k: "account", label: "Configurações da conta", icon: GearIcon, href: "/dashboard/account" },

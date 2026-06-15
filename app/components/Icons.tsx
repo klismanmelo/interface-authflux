@@ -375,3 +375,46 @@ export const RefreshIcon = (p: IconProps) => (
     {...p}
   />
 );
+
+export const LinkIcon = (p: IconProps) => (
+  <Icon
+    paths={
+      <>
+        <path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1" />
+        <path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1" />
+      </>
+    }
+    {...p}
+  />
+);
+
+export const SearchIcon = (p: IconProps) => (
+  <Icon
+    paths={
+      <>
+        <circle cx="11" cy="11" r="7" />
+        <path d="m21 21-4-4" />
+      </>
+    }
+    {...p}
+  />
+);
+
+export const EditIcon = (p: IconProps) => (
+  <Icon
+    paths={
+      <>
+        <path d="M4 20h4l11-11-4-4L4 16z" />
+        <path d="M13.5 6.5l4 4" />
+      </>
+    }
+    {...p}
+  />
+);
+
+export const TrashIcon = (p: IconProps) => (
+  <Icon
+    d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"
+    {...p}
+  />
+);
