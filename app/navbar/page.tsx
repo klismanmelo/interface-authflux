@@ -23,7 +23,7 @@ export default function NavbarPage() {
           className="card"
           style={{ overflow: "hidden", boxShadow: "var(--shadow)" }}
         >
-          <Topbar title="Home" />
+          <Topbar title="Home" username="Maria Souza" />
         </div>
       </section>
 
@@ -116,7 +116,7 @@ export default function NavbarPage() {
         >
           <Sidebar activeRoute="dashboard" />
           <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-            <Topbar title="Home" />
+            <Topbar title="Home" username="Maria Souza" />
             <div
               style={{
                 flex: 1,

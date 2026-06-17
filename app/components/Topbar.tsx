@@ -13,9 +13,18 @@ import { logoutAction } from "../auth/action/action-auth";
 
 interface TopbarProps {
   title?: string;
+  username: string;
 }
 
-export default function Topbar({ title = "AuthFlux" }: TopbarProps) {
+function getInitials(name: string) {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return "";
+  if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
+export default function Topbar({ title = "AuthFlux", username }: TopbarProps) {
+  const initials = getInitials(username);
   return (
     <header
       style={{
@@ -141,13 +150,13 @@ export default function Topbar({ title = "AuthFlux" }: TopbarProps) {
                 fontFamily: "var(--font-display)",
               }}
             >
-              MS
+              {initials}
             </span>
             <span
               className="hide-sm"
               style={{ fontSize: 13.5, fontWeight: 600 }}
             >
-              Maria Souza
+              {username}
             </span>
             <ChevronDownIcon size={15} style={{ color: "var(--faint)" }} />
           </button>

@@ -1,11 +1,14 @@
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import { getMeAction } from "../dashboard/action/action-dashboard";
 
-export default function MyApiLayout({
+export default async function MyApiLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await getMeAction();
+
   return (
     <div
       style={{
@@ -24,7 +27,7 @@ export default function MyApiLayout({
           minWidth: 0,
         }}
       >
-        <Topbar title="Minhas aplicações" />
+        <Topbar title="Minhas aplicações" username={user.username} />
 
         <main
           style={{

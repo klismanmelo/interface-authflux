@@ -1,11 +1,14 @@
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import { getMeAction } from "./action/action-dashboard";
 
-export default function DashboardLayout({
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await getMeAction();
+
   return (
     <div
       style={{
@@ -25,7 +28,7 @@ export default function DashboardLayout({
           minWidth: 0,
         }}
       >
-        <Topbar title="Home" />
+        <Topbar title="Home" username={user.username} />
 
         <main
           style={{
